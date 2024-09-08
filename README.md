@@ -1,58 +1,117 @@
+<p align="center"><img src="https://huggingface.co/datasets/MakiAi/IconAssets/resolve/main/HarmonAI_II.png" width="100%"></p>
+
 # Terraform AWS Playground
 
-このリポジトリは、AWSリソースをTerraformで管理するための実験的な環境（サンドボックス）です。
+## AWSリソース管理の実験的環境 🚀
 
-## 概要
+<p align="center">
+  <img src="https://img.shields.io/github/stars/Sunwood-ai-labs/terraform-aws-playground?style=social" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/Sunwood-ai-labs/terraform-aws-playground?style=social" alt="GitHub forks">
+  <img src="https://img.shields.io/github/last-commit/Sunwood-ai-labs/terraform-aws-playground" alt="Last commit">
+  <img src="https://img.shields.io/github/languages/top/Sunwood-ai-labs/terraform-aws-playground" alt="Top language">
+  <img src="https://img.shields.io/github/license/Sunwood-ai-labs/terraform-aws-playground" alt="License">
+</p>
 
-このプロジェクトは、Terraformを使用してAWSリソースをプロビジョニングし管理する方法を学習し、実験するためのものです。
+## 📚 概要
 
-## 前提条件
+このプロジェクトは、Terraformを使用してAWSリソースをプロビジョニングし管理する方法を学習し、実験するためのサンドボックス環境です。初心者からエキスパートまで、AWSインフラストラクチャをコードとして管理する手法を探求できます。
 
-- [Terraform](https://www.terraform.io/downloads.html)がインストールされていること
-- AWSアカウントと適切な権限を持つIAMユーザー
-- AWS CLIがインストールされ、設定されていること
+## ✨ 特長
 
-## 使用方法
+- 🛠️ Terraformを使用したAWSリソースの簡単なプロビジョニング
+- 🧪 安全な実験環境で、リスクなくインフラ管理を学習
+- 📦 モジュール化された構造で、再利用可能なインフラコンポーネントを作成
+- 🔄 バージョン管理されたインフラで、変更の追跡と復元が容易
+- 🚀 迅速なデプロイメントと削除で、コスト効率の良い学習が可能
 
-1. このリポジトリをクローンします：
+## 🚀 インストールと使用方法
 
-   ```
-   git clone https://github.com/yourusername/terraform-aws-playground.git
+1. **前提条件**:
+   - [Terraform](https://www.terraform.io/downloads.html)のインストール
+   - AWSアカウントと適切な権限を持つIAMユーザー
+   - AWS CLIのインストールと設定
+
+2. **リポジトリのクローン**:
+   ```bash
+   git clone https://github.com/Sunwood-ai-labs/terraform-aws-playground.git
    cd terraform-aws-playground
    ```
 
-2. Terraformの初期化：
-
-   ```
+3. **Terraformの初期化**:
+   ```bash
    terraform init
    ```
 
-3. 実行計画の確認：
-
-   ```
+4. **実行計画の確認**:
+   ```bash
    terraform plan
    ```
 
-4. リソースの作成：
-
-   ```
+5. **リソースの作成**:
+   ```bash
    terraform apply
    ```
 
-5. リソースの削除：
-
-   ```
+6. **リソースの削除**:
+   ```bash
    terraform destroy
    ```
 
-## 注意
+詳細なドキュメントは[こちら](https://github.com/Sunwood-ai-labs/terraform-aws-playground/wiki)をご覧ください。
 
-このプロジェクトは学習と実験のためのものです。本番環境での使用は推奨されません。AWSリソースの使用には料金が発生する可能性があるため、使用後は必ずリソースを削除してください。
+## 📁 プロジェクト構造
 
-## カスタマイズ
+```
+terraform-aws-playground/
+├── main.tf          # メインのTerraform設定ファイル
+├── variables.tf     # 入力変数の定義
+├── outputs.tf       # 出力値の定義
+└── README.md        # プロジェクトの説明書
+```
 
-`variables.tf`ファイルを編集することで、デフォルトのリージョンやインスタンスタイプなどを変更できます。新しいリソースを追加する場合は、`main.tf`ファイルを編集してください。
+## ⚙️ 設定
 
-## ライセンス
+- `variables.tf`ファイルで、デフォルトのリージョンやインスタンスタイプなどを設定できます。
+- 新しいリソースを追加する場合は、`main.tf`ファイルを編集してください。
+
+主要な設定オプション:
+- `aws_region`: 使用するAWSリージョン
+- `instance_type`: EC2インスタンスタイプ
+
+## 📝 アップデート履歴
+
+- **v1.0.0** (2023-05-01)
+  - 初期リリース
+  - 基本的なEC2インスタンス作成機能の追加
+
+- **v0.1.0** (2023-04-15)
+  - プロジェクトの初期設定
+
+## 🤝 コントリビューション
+
+プロジェクトへの貢献を歓迎します！以下の方法で貢献できます：
+
+- バグの報告
+- 新機能の提案
+- プルリクエストの送信
+
+詳細は[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。
+
+## 📄 ライセンス
 
 このプロジェクトはMITライセンスの下で公開されています。詳細は[LICENSE](LICENSE)ファイルを参照してください。
+
+## 🙏 謝辞
+
+- Terraformコミュニティ
+- AWSドキュメンテーションチーム
+- 本プロジェクトに貢献してくださったすべての方々
+
+## 📞 お問い合わせ・サポート
+
+- プロジェクトに関する質問や問題は、[GitHub Issues](https://github.com/Sunwood-ai-labs/terraform-aws-playground/issues)で報告してください。
+- より詳細な情報や最新のアップデートについては、[プロジェクトWiki](https://github.com/Sunwood-ai-labs/terraform-aws-playground/wiki)をご覧ください。
+
+---
+
+⚠️ **注意**: このプロジェクトは学習と実験のためのものです。本番環境での使用は推奨されません。AWSリソースの使用には料金が発生する可能性があるため、使用後は必ずリソースを削除してください。
